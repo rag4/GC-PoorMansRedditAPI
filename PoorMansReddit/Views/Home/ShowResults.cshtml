@@ -1,0 +1,13 @@
+﻿@model List<Child>
+
+
+@for(int i = 0; i < 10; i++)
+{
+    string link = $"reddit.com{@Model[i].data.permalink}";
+    <h2><i>@Model[i].data.title</i></h2>
+    <p><img src="@Model[i].data.thumbnail" /></p>
+    <p><strong>Posted by: </strong> <i>u/@Model[i].data.author</i></p>
+    <p><strong>Link:</strong> <i>@link</i></p>
+    <br />
+    <br />
+}
